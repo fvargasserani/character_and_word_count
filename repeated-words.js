@@ -1,10 +1,11 @@
 function getRepeatedWords(str) {
     var count = {};
-    for (var i = 0; i < str.length; i++) {
-        if (count[str]) {
-            count[str]++;
+    var words = str.split(' ');
+    for (let i of words) {
+        if (count[i]) {
+            count[i]++;
         } else {
-            count[str] = 1;
+            count[i] = 1;
         }
     }
     return count;
